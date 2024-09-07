@@ -1,15 +1,18 @@
-import React from 'react'
-import Login from './components/Login'
-import home from './components/home'
-//import {BrowserRouter as Router}, Routes, Route from 'react-router-dom';
+import React from "react";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <Login/>
-      <home/>
+      <Router>
+        <Routes>
+          <Route to="/home" element={<h1>Home</h1>} />
+          <Route to="/" element={<Login />} />
+        </Routes>
+      </Router>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
