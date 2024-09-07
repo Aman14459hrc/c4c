@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "./components/Login";
+import Home from "./components/home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -7,8 +8,8 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route to="/home" element={<h1>Home</h1>} />
           <Route to="/" element={<Login />} />
+          <Route to="/home" element={<Home/>} />
         </Routes>
       </Router>
     </>
